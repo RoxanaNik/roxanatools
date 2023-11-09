@@ -23,4 +23,13 @@ test_that("Testing sum_numbers function", {
 
   # Test 3: Test the sum of zero and a number
   expect_equal(sum_numbers(0, 15), 15)
+
+  # Test 4: Test the sum of two large positive numbers
+  expect_equal(sum_numbers(1000000, 2000000), 3000000)
+
+  # Test 5: Test the sum of two large negative numbers
+  expect_equal(sum_numbers(-987654321, -123456789), -1111111110)
+
+  # Test 6: Test the sum of a positive number and zero
+  expect_equal(sum_numbers(987, 0), 987)
 })
